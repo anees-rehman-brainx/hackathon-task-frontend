@@ -1,0 +1,175 @@
+.section {
+  margin-top: 12px;
+}
+
+.title {
+  margin: 0 0 14px;
+  font-size: 1.15rem;
+  font-weight: 650;
+  color: var(--heading);
+  letter-spacing: -0.02em;
+}
+
+.epic {
+  margin: 0 0 18px;
+  line-height: 1.5;
+  color: var(--text);
+  font-size: 0.98rem;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: var(--surface-muted);
+  border: 1px solid var(--border);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+@media (min-width: 720px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.card {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px 16px 14px;
+  background: var(--surface);
+  box-shadow: var(--shadow-card);
+  text-align: left;
+}
+
+.cardHead {
+  margin-bottom: 10px;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.type,
+.priority,
+.order {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: var(--chip-bg);
+  color: var(--chip-text);
+}
+
+.priority {
+  background: var(--priority-bg);
+  color: var(--priority-text);
+}
+
+.cardTitle {
+  margin: 0;
+  font-size: 1.02rem;
+  font-weight: 650;
+  color: var(--heading);
+  line-height: 1.35;
+}
+
+.desc {
+  margin: 0 0 12px;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+.sub {
+  margin-bottom: 12px;
+}
+
+.subTitle {
+  margin: 0 0 6px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+.subList {
+  margin: 0;
+  padding-left: 1.1rem;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+.subListMono {
+  margin: 0;
+  padding-left: 1.1rem;
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: var(--text);
+  font-family: var(--mono);
+}
+
+.optional,
+.deps {
+  margin: 0 0 6px;
+  font-size: 0.86rem;
+  line-height: 1.45;
+  color: var(--muted);
+}
+
+.optLabel {
+  font-weight: 700;
+  color: var(--heading);
+  margin-right: 4px;
+}
+
+.footer {
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+}
+
+.subheading {
+  margin: 0 0 8px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+
+.footerText {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+.footerList {
+  margin: 0;
+  padding-left: 1.2rem;
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.gaps {
+  margin-top: 18px;
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 1px dashed var(--warn-border);
+  background: var(--warn-bg);
+  color: var(--warn-text);
+  font-size: 0.92rem;
+}
+
+.gaps ul {
+  margin: 8px 0 0;
+  padding-left: 1.2rem;
+}

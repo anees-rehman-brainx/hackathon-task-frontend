@@ -1,0 +1,84 @@
+:root {
+  --text: #1e293b;
+  --muted: #64748b;
+  --heading: #0f172a;
+  --bg: #e8edf5;
+  --surface: #ffffff;
+  --surface-elevated: #ffffff;
+  --surface-input: #f8fafc;
+  --surface-muted: #f1f5f9;
+  --border: #e2e8f0;
+  --border-strong: #cbd5e1;
+  --primary: #0d6efd;
+  --primary-contrast: #ffffff;
+  --focus: #0d6efd;
+  --focus-ring: color-mix(in srgb, var(--primary) 28%, transparent);
+  --accent-line: #22c55e;
+  --chip-bg: #e0e7ff;
+  --chip-text: #312e81;
+  --priority-bg: #fef3c7;
+  --priority-text: #92400e;
+  --danger-bg: #fef2f2;
+  --danger-border: #fecaca;
+  --danger-text: #991b1b;
+  --warn-bg: #fffbeb;
+  --warn-border: #fde68a;
+  --warn-text: #92400e;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --shadow-card: 0 1px 2px rgb(15 23 42 / 6%), 0 8px 24px rgb(15 23 42 / 6%);
+  --shadow-primary: 0 2px 8px color-mix(in srgb, var(--primary) 35%, transparent);
+
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.5;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #e2e8f0;
+    --muted: #94a3b8;
+    --heading: #f8fafc;
+    --bg: #0b1220;
+    --surface: #111827;
+    --surface-elevated: #1e293b;
+    --surface-input: #0f172a;
+    --surface-muted: #1e293b;
+    --border: #334155;
+    --border-strong: #475569;
+    --primary: #3b82f6;
+    --primary-contrast: #0b1120;
+    --focus: #60a5fa;
+    --focus-ring: color-mix(in srgb, var(--primary) 35%, transparent);
+    --accent-line: #4ade80;
+    --chip-bg: #312e81;
+    --chip-text: #e0e7ff;
+    --priority-bg: #78350f;
+    --priority-text: #fef3c7;
+    --danger-bg: #450a0a;
+    --danger-border: #7f1d1d;
+    --danger-text: #fecaca;
+    --warn-bg: #422006;
+    --warn-border: #b45309;
+    --warn-text: #fef3c7;
+    --shadow-card: 0 1px 2px rgb(0 0 0 / 35%), 0 12px 32px rgb(0 0 0 / 28%);
+    --shadow-primary: 0 2px 12px color-mix(in srgb, var(--primary) 45%, transparent);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+#root {
+  min-height: 100vh;
+}
