@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import { httpClient } from "../api/httpClient.js";
+import { BriefToTicketsFlow } from "../features/brief-to-tickets/BriefToTicketsFlow.jsx";
 import "./app.css";
 
 export default function App() {
   const [health, setHealth] = useState(null);
-  const [error, setError] = useState(null);
+  const [healthError, setHealthError] = useState(null);
 
   useEffect(() => {
     let cancelled = false;
@@ -14,7 +15,7 @@ export default function App() {
         if (!cancelled) setHealth(res.data);
       })
       .catch((err) => {
-        if (!cancelled) setError(err?.message ?? "Request failed");
+        if (!cancelled) setHealthError(err?.message ?? "Request failed");
       });
     return () => {
       cancelled = true;
@@ -22,22 +23,19 @@ export default function App() {
   }, []);
 
   return (
-    <div className="app-shell">
-      <main className="card">
-        <p className="eyebrow">Hackathon starter</p>
-        <h1>Frontend + API</h1>
-        <p className="lede">
-          Vite proxies <code>/api</code> to the Nest server in dev. This page
-          calls <code>GET /health</code> on the same origin.
-        </p>
-        <div className="status">
-          {error && <p className="err">Backend: {error}</p>}
-          {!error && health && (
+    <div className="app-shell app-shell--wide">
+      <div className="app-layout">
+        <BriefToTicketsFlow />
+
+        <details className="dev-health">
+          <summary>API health (dev)</summary>
+          {healthError && <p className="err">{healthError}</p>}
+          {!healthError && health && (
             <pre className="ok">{JSON.stringify(health, null, 2)}</pre>
           )}
-          {!error && !health && <p className="muted">Checking backend…</p>}
-        </div>
-      </main>
+          {!healthError && !health && <p className="muted">Checking backend…</p>}
+        </details>
+      </div>
     </div>
   );
 }
